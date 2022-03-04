@@ -32,9 +32,9 @@ export const WhiteLogo = styled.ImageBackground`
   /* padding: 0 ${({ theme }) => theme.SIZES.LOW_INDENT}; */
   /* background-color: ${({ theme }) => theme.COLORS.PURPLE};
    */
-  width: 150;
-  height: 150;
+  width: 150px;
+  height: 150px;
   position: absolute;
-  bottom: -12;
+  bottom: -12px;
   right: 0;
 `;

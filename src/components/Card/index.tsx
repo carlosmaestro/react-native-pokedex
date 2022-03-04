@@ -16,7 +16,7 @@ export function Card(props: CardProps) {
 
   return (
     <SCard
-      key={props.entityRef.id}
+      key={props.entityRef.name + '' + Math.floor(Math.random() * 1000)}
       onPress={() =>
         props.navigation.navigate('PokemonDetail', {
           entityRef: props.entityRef,

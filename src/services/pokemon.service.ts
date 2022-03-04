@@ -11,9 +11,11 @@ class PokemonService implements CommonService {
     this.subpath = 'pokemon';
   }
 
-  getAll() {
-    return api.get<Pagination<EntityLinkRef>>(`/${this.subpath}?
-    offset=0&limit=80`); // 1200
+  getAll(offset: number = 0, limit: number = 10) {
+    let uri = `/${this.subpath}?offset=${offset}&limit=${limit}`;
+    console.log(uri);
+
+    return api.get<Pagination<EntityLinkRef>>(uri); // 1200
   }
 
   getOficialOfficialArtworkUri(idPokemon: number | string) {

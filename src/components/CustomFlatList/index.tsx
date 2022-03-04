@@ -7,6 +7,7 @@ export interface CustomFlatListProps {
   data?: any[];
   onPressFunction?: Function;
   navigation: any;
+  onEndReached?: Function;
 }
 
 export const CustomFlatList = (props: CustomFlatListProps) => {
@@ -20,6 +21,12 @@ export const CustomFlatList = (props: CustomFlatListProps) => {
         data={props.data}
         renderItem={renderItem}
         keyExtractor={item => item.id + item.name}
+        onEndReached={() => {
+          if (props.onEndReached) {
+            props.onEndReached();
+          }
+        }}
+        onEndReachedThreshold={0.1}
       />
     </Container>
   );
