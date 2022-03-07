@@ -43,3 +43,6 @@ $  npm install @react-navigation/native-stack
 $   npm install axios
 
 ```
+
+### API - PokeAPI
+[PokeAPI](https://pokeapi.co/)
